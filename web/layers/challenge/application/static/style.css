@@ -1,0 +1,68 @@
+html, body {
+    margin:0px;
+    padding:0px;
+    background-color:#351431;
+}
+
+#container {
+    margin: 100px auto;
+    width: 1024px;
+    border-radius: 20px;
+    border: 5px solid #775253;
+    position:relative;
+    background-color:#DFE0DC;
+}
+
+#header {
+    padding:20px;
+    background-image:url("/static/onions.jpg");
+    color:#FFF;
+}
+
+#header h1, #header h3 {
+    text-shadow: 2px 2px 2px #000;
+}
+
+#content {
+    padding:20px;
+}
+
+.image_box {
+    display: flex;
+    flex-wrap: wrap;
+    min-height:350px;
+  }
+
+.image_box div {
+    flex-grow: 1;
+    width: 33%;
+    height: 100px;
+    gap: 10px;
+}
+
+.image_box img {
+    width:100%;
+}
+
+#footer {
+    padding:20px;
+    text-align:center;
+    font-weight:bold;
+    font-size:0.8em;
+}
+
+#haxxed {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height:500px;
+    margin-left: -250px;
+    margin-top: -250px;
+    background-image:url("/static/sticky.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding:100px 30px 0px 30px;
+    font-family: 'Grape Nuts', cursive;
+    font-size:1.2em;
+}

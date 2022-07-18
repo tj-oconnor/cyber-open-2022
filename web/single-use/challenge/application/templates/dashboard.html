@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Amalgamated Single-User Plasticware Co.</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <div id="content">
+        <h3>Sales Dashboard</h3>
+        <p>Current User: {{ current_user.username }}</p>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="javascript:void(0)">Menu</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="javascript:void(0)">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)">Customer Data</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Reports
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="javascript:void(0)">Sales</a>
+                    <a class="dropdown-item" href="javascript:void(0)">Inventory</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:void(0)">Customers</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/logout">Logout</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+        {% if current_user.username == "admin" %}
+        <div class="alert alert-success" role="alert">
+            <p>If you see this then you somehow broke into my account! I guess our security wasn't so great after all!</p>
+            <p>Oh well, I guess it's back to the drawing board....</p>
+            <p>Here's your prize for completing my challenge: <b>{{ flag }}</b></p>
+            <p style='text-align:right'>- Admin</p>
+        </div>
+        <div class="alert alert-secondary" role="alert">
+            Having fun? <a href="https://grnh.se/82dc5d093us" target="_blank">We're hiring!</a> &#128058;
+        </div>
+        {% endif %}
+        <h4 style="color:red">!Important!</h4>
+        <p>The following pin number has been randomly generated for you to use for any support or sales calls.</p>
+        <h4>PIN: {{ otp_code }}</h4>
+        <p>We take security very seriously here at Amalgamated, and so instead of having a password that stays the same all the time, we use passwords that change every 30 seconds.</p>
+        <p>Your pin number above is also used to generate time-based one-time-use passwords (TOTP). Please copy the base32 code below, or scan the QR code, into your authenticator app of choice.</p>
+        <h4>OTP CODE: {{ otp_seed }}</h4>
+        <p>
+            <canvas id="otpqr"></canvas>
+        </p>
+        <script src="/static/js/qrcode.js"></script>
+        <script>
+        QRCode.toCanvas(document.getElementById('otpqr'), '{{ otp_uri | safe }}', function (error) {
+            if (error) console.error(error)
+        })
+        </script>
+      </div>
+      <div id="footer">Challenge by <a href="https://darkwolfsolutions.com" target="_blank">@tsuto</a></div>
+    </body>
+</html>

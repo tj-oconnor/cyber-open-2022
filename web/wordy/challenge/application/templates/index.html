@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wordy</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+        <script src="/static/js/main.js"></script>
+    </head>
+    <body>
+            <div id="header">
+                <h1>Wordy</h1>
+            </div>
+            <div style="text-align:center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rulesModal"><i class="bi-stickies-fill"></i>Rules</button>
+                <button type="button" class="btn btn-secondary" style="display:none" id="resetButton"><i class="bi-arrow-counterclockwise"></i>Reset</button>
+            </div>
+            <div id="game-board">
+                <div class="letter-row">
+                  <div class="letter-box"></div>
+                  <div class="letter-box"></div>
+                  <div class="letter-box"></div>
+                  <div class="letter-box"></div>
+                  <div class="letter-box"></div>
+                </div>
+            </div>
+            <div id="messages">
+                <p id="resp-msg" class="alert alert-info hidden">Please wait...</p>
+            </div>
+            <div id="keyboard-cont">
+                <div class="first-row">
+                    <button class="keyboard-button">q</button>
+                    <button class="keyboard-button">w</button>
+                    <button class="keyboard-button">e</button>
+                    <button class="keyboard-button">r</button>
+                    <button class="keyboard-button">t</button>
+                    <button class="keyboard-button">y</button>
+                    <button class="keyboard-button">u</button>
+                    <button class="keyboard-button">i</button>
+                    <button class="keyboard-button">o</button>
+                    <button class="keyboard-button">p</button>
+                </div>
+                <div class="second-row">
+                    <button class="keyboard-button">a</button>
+                    <button class="keyboard-button">s</button>
+                    <button class="keyboard-button">d</button>
+                    <button class="keyboard-button">f</button>
+                    <button class="keyboard-button">g</button>
+                    <button class="keyboard-button">h</button>
+                    <button class="keyboard-button">j</button>
+                    <button class="keyboard-button">k</button>
+                    <button class="keyboard-button">l</button>
+                </div>
+                <div class="third-row">
+                    <button class="keyboard-button">Del</button>
+                    <button class="keyboard-button">z</button>
+                    <button class="keyboard-button">x</button>
+                    <button class="keyboard-button">c</button>
+                    <button class="keyboard-button">v</button>
+                    <button class="keyboard-button">b</button>
+                    <button class="keyboard-button">n</button>
+                    <button class="keyboard-button">m</button>
+                    <button class="keyboard-button">Enter</button>
+                </div>
+            </div>
+            <div id="footer">Challenge by <a href="http://darkwolfsolutions.com" target="_blank">@tsuto</a></div>
+
+            <div class="modal fade" id="rulesModal" tabindex="-1" role="dialog" aria-labelledby="rulesModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title" id="rulesModalLabel">Rules</h3>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                    <p>Welcome to <b>Wordy</b>!</p>
+                    <p>I've chosen a random five letter word for you to guess. However, I accidentally got the app stuck in super-extra-hard mode. So instead of the usual six guesses...you just get one.</p>
+                    <p>I have faith in you, though. Correctly guess the word and you'll get a special prize!</p>
+                    <p style="font-style:italic">- The Puzzlemaster</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                  $(document).ready(function(){
+
+                    $("#rulesModal").modal('show');
+
+                  });
+              </script>
+    </body>
+</html>

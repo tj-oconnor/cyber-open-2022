@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dot's Onion Farm</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/static/style.css"/>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1>Dot's Onion Farm</h1>
+                <h3>The Finest Flavors Since 1903</h3>
+            </div>
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
+            {% block footer %}
+            <div id="footer">Challenge by <a href="https://darkwolfsolutions.com" target="_blank">@tsuto</a></div>
+            {% endblock %}
+        </div>
+    </body>
+</html>

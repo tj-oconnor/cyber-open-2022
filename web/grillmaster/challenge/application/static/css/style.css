@@ -1,0 +1,71 @@
+html, body {
+    margin:0px;
+    padding:0px;
+    background-color:#9ac7e8;
+    font-family: 'Patrick Hand', cursive;
+}
+
+#container {
+    margin: 100px auto;
+    width: 1024px;
+    border-radius: 20px;
+    border: 5px solid #f0262a;
+    position:relative;
+    background-color:#fcdd60;
+}
+
+#header {
+    padding:20px;
+    text-align:center;
+}
+
+#menu {
+    background-color:#f172a9;
+    padding:0px 20px;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin:0px;
+    padding:0px;
+}
+
+ul.nav li {
+    display:inline-block;
+    margin:0px;
+    padding:0px;
+}
+
+ul.nav li a {
+    display: block;
+    padding: 5px 10px;
+    text-align:center;
+    color:#fcdd60;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1.2em;
+    border-right: 2px solid #f0262a;
+    text-shadow:1px 1px 1px #000;
+}
+
+ul.nav li a:hover {
+    background-color:#95d244;
+    color:#f0262a;
+}
+
+
+#content {
+    padding:20px;
+}
+
+#footer {
+    padding:20px;
+    text-align:center;
+    font-weight:bold;
+    font-size:0.8em;
+}
+
+.hidden {
+    display: none;
+  }
+  

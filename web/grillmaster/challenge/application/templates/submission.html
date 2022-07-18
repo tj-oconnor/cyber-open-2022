@@ -1,0 +1,43 @@
+{% extends "template.html" %}
+{% block content %}
+<h3>{{ submission['title'] }}</h3>
+<hr>
+<h4>Ingredients</h4>
+
+{{ submission['recipe'] }}
+<hr>
+{% if submission['winner'] %}
+<h4>Award</h4>
+
+<p>
+The Grillmaster has determined this burger is certified delicious and matches Rob's standard for quality!
+</p>
+<p>
+    As a prize, we are pleased to offer you this coupon for a lifetime supply of your prize-winning burger. (Hope you really put some thought into it)
+</p>
+<p>
+    <b>Coupon Code: {{ flag }}</b>
+</p>
+<p>
+    Having fun? <a href="https://grnh.se/82dc5d093us" target="_blank">We're hiring!</a> &#128058;<br>
+</p>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    startConfetti();
+
+});
+
+</script>
+
+{% else %}
+<h4>Comments</h4>
+{{ submission['comments'] | safe }}
+{% endif %}
+<hr>
+<div style="text-align:center; padding:10px;">
+    <h4><i class="bi-lock-fill"></i> Grillmaster Only</h4>
+    <a href="/submission/{{ submission['id'] }}/approve" class="btn {% if local_conn %}btn-success{% else %}btn-secondary{% endif %}" id="approve_btn">Award Prize</a>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+{% block content %}
+<h3>Submissions</h3>
+<table class="table">
+    <thead>
+    <tr><th scope="col">Burger Name</th><th scope="col">Submission Date</th><th scope="col">Winner</th></tr>
+    </thead>
+    <tbody>
+    {% for submission in submissions %}
+    <tr>
+        <td><a href="/submission/{{ submission['id'] }}">{{ submission['title'] }}</a></td>
+        <td>{{ submission['date'] }}</td>
+        <td>{% if submission['winner'] %}
+            <i class="bi-check-lg" style="color:green"></i></a>
+            {% else %}    
+            <i class="bi-x-lg" style="color:red"></i>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

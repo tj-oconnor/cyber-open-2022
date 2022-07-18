@@ -1,0 +1,37 @@
+{% extends "template.html" %}
+{% block content %}
+<h3>Welcome to Dot's Onion Farm!</h3>
+<p>
+    Founded in 1903, Dot started farming onions here with her family on this beautiful 120 acre property. Today it's not only a source for all the onions you could possibly eat, but it's also a great place to learn about cooking with onions as well!
+</p>
+<p>
+    Please visit the recipes page to see more information about how to create a virtual <b>EXPLOSION</b> of flavor in any dish!
+</p>
+<div class="image_box">
+    <div><img src="/static/o1.jpg"/></div>
+    <div><img src="/static/o2.jpg"/></div>
+    <div><img src="/static/o3.jpg"/></div>
+</div>
+<h3>History of Onions</h3>
+<p>
+    The history of ancestral onion species is not well documented. Ancient records of onion use spans western and eastern Asia, so the geographic origin of the onion is uncertain. Yet, domestication likely took place in Southwest or Central Asia. Onions have been variously described as having originated in Iran, western Pakistan and Central Asia.
+</p>
+<p>
+    Traces of onions recovered from Bronze Age settlements in China suggest that onions were used as far back as 5000 BC, not only for their flavour, but also for the bulb's durability in storage and transport. Ancient Egyptians revered the onion bulb, viewing its spherical shape and concentric rings as symbols of eternal life. Onions were used in Egyptian burials, as evidenced by onion traces found in the eye sockets of Ramesses IV.
+</p>
+<p>
+    Pliny the Elder of the first century AD wrote about the use of onions and cabbage in Pompeii. He documented Roman beliefs about the onion's ability to improve ocular ailments, aid in sleep, and heal everything from oral sores and toothaches to dog bites, lumbago, and even dysentery. Archaeologists unearthing Pompeii long after its 79 AD volcanic burial have found gardens resembling those in Pliny's detailed narratives. According to texts collected in the fifth/sixth century AD under the authorial aegis of "Apicius" (said to have been a gourmet), onions were used in many Roman recipes.
+</p>
+<p>
+    In the Age of Discovery, onions were taken to North America by the first European settlers, who found close relatives of the plant such as Allium tricoccum readily available and widely used in Native American gastronomy. According to diaries kept by certain first English colonists, the bulb onion was one of the first crops planted by the Pilgrim fathers. 
+</p>
+{% endblock %}
+{% block footer %}
+{{ super() }}
+<div id="haxxed">
+    <h1>YOU'VE BEEN PWNED</h1>
+    <p>This site has been taken over by the GARLIC GANG. Onions are cool and all, but everyone knows there is one true superior flavor enhancer.</p>
+    <p style="font-style:italic">#garlic4lyfe</p>
+    <p>Want to join the <b>right</b> side in the conflict? <a href='/join'>Click here</a> to see if you have what it takes.</p>
+</div>
+{% endblock %}

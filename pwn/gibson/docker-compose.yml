@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  infrastructure:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+      target: s390x_infrastructure
+    logging:
+      driver: "json-file"
+    ports:
+      - "9999:9999"
+    platform: linux/amd64
+  competitor:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+      target: s390x_competitor
+    logging:
+      driver: "json-file"
+    ports:
+      - "8888:8888"
+      - "1234:1234"
+    platform: linux/amd64

@@ -1,0 +1,226 @@
+@font-face {
+    font-family: "Digital Dismay";
+    src: url("./digital-dismay.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Press Start";
+    src: url("./prstart.ttf");
+}
+
+@font-face {
+    font-family: "MS Sans Serif";
+    src: url("./micross.ttf");
+}
+
+* {
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+html, body {
+    margin:0px;
+    padding:0px;
+    background-color:#0D8584;
+}
+
+#flex-container {
+    display: flex;
+    justify-content: center;
+    margin: 80px 10px;
+}
+
+
+button {
+    font-family: 'MS Sans Serif';
+    text-align: left;
+    font-size: 14px;
+    height: 30px;
+    width: 100px;
+    background-color: #BFBFBF;
+    color: black;
+    border-bottom: 2px solid #7B7B7B;
+    border-left: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #7B7B7B;
+}
+
+button:hover {
+    background-color: lightgray;
+    color: slategray;
+    cursor: pointer;
+}
+
+td {
+    height: 20px;
+    width: 20px;
+    background-color: #C0C0C0;
+    border: 1.5px solid;
+    border-top-color: #ffffff;
+    border-right-color: #7B7B7B;
+    border-bottom-color: #7B7B7B;
+    border-left-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    font-weight:bold;
+}
+
+.cleared {
+    font-family: "Press Start";
+    background-color: #C0C0C0;
+    font-size: 80%;
+    text-align: center;
+    border: none;
+}
+
+.flagged {
+    background-image: url(../images/flag.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.mine {
+    background-image: url(../images/bomb.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.mine.loser {
+    background-color:red;
+}
+
+.wrong_mine {
+    background-image: url(../images/wrong-bomb.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#content {
+    background-color:#D3CEC4;
+    padding:2px;
+}
+
+#header {
+    padding:20px;
+    text-align:center;
+}
+
+#content {
+    padding:0px;
+    box-shadow:5px 5px 5px #333;
+}
+
+#game_controls a {
+    font-family: 'MS Sans Serif';
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0;
+    margin:0px;
+    padding:5px;
+    display: inline-block;
+    border:5px solid #D3CEC4;
+}
+
+#game_controls a:hover {
+    border:5px outset;
+}
+
+#board {
+    background-color: lightgray;
+}
+
+
+#footer {
+    padding:20px;
+    text-align:center;
+    font-weight:bold;
+    font-size:0.8em;
+}
+
+#scoreboard {
+    background-color: #C0C0C0;
+    border: 1.5px solid;
+    border-top-color: #ffffff;
+    border-right-color: #7B7B7B;
+    border-bottom-color: #7B7B7B;
+    border-left-color: #ffffff;
+    padding: 5px;
+    text-align:center;
+    vertical-align: middle;
+}
+
+#scoreboard a {
+    display:inline-block;
+    text-align: center;
+    color: #000;
+    font-size: 1.2em;
+    height:100%;
+    padding:0px 5px;
+}
+
+#scoreboard a:hover {
+    color:#333;
+}
+
+#bomb-counter {
+    font-family: 'Digital Dismay';
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: red;
+    background-color: black;
+    text-align: center;
+    padding: 4px 4px 0 7px;
+    line-height: 1em;
+    display:inline-block;
+    width: 50px;
+}
+
+#title_bar {
+    font-family: 'MS Sans Serif';
+    letter-spacing: .5px;
+    color: #D5DEF3;
+    font-size: 16px;
+    padding:5px;
+    background: -moz-linear-gradient(left, rgba(33,41,89,1) 0%, rgba(33,41,89,1) 11%, rgba(80,114,161,1) 56%, rgba(117,172,219,0.7) 92%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(33,41,89,1) 0%,rgba(33,41,89,1) 11%,rgba(80,114,161,1) 56%,rgba(117,172,219,0.7) 92%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(33,41,89,1) 0%,rgba(33,41,89,1) 11%,rgba(80,114,161,1) 56%,rgba(117,172,219,0.7) 92%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212959', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+}
+
+.hidden {
+    display: none;
+  }
+
+.nearby-1 {
+    color:#0000FA;
+}
+
+.nearby-2 {
+    color:#4B802D;
+}
+
+.nearby-3 {
+    color:#DB1300;
+}
+
+.nearby-4 {
+    color:#202081;
+}
+
+.nearby-5 {
+    color:#690400;
+}
+
+.nearby-6 {
+    color:#457A7A;
+}
+
+.nearby-7 {
+    color:#1B1B1B;
+}
+
+.nearby-8 {
+    color:#7A7A7A;
+}

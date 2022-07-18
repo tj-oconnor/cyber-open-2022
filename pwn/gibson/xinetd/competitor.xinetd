@@ -1,0 +1,15 @@
+service competitor
+{
+    disable         = no
+    socket_type     = stream
+    protocol        = tcp
+    wait            = no
+    user            = user
+    type            = UNLISTED
+    port            = 8888
+    bind            = 0.0.0.0
+    server          = /home/user/wrapper.sh
+    log_type        = FILE /var/log/xinetdlog
+    log_on_success  = HOST PID EXIT DURATION
+    log_on_failure  = HOST
+}

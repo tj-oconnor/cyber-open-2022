@@ -1,0 +1,102 @@
+{% extends "template.html" %}
+{% block content %}
+<h3>Welcome to Rob's Burgers!</h3>
+<p>
+    In keeping with our tradition of creating the World's Best Burgers&trade;, Rob is pleased to announce the new contest to select our next speciality burger of the day! Please use the form below to submit your burger recipe and choose the ingredients you would like to see on it!
+</p>
+<p>Rob is a busy guy though, so we have hired some new "help" to review each of the recipes. A state-of-the-art AI robot called The Grillmaster 3000 will personally review each of your submissions in seconds and decide if it is worthy of being a prize winner!</p>
+{% if logged_in %}
+<h3>Burger Submission Form</h3>
+<p>Use the form below to select what ingredients you think should be on the ultimate Rob's Burger! Also you may add any comments or pleas for mercy in the space provided. (The Grillmaster may consider them)</p>
+<h4>Title</h4>
+<input type="text" class="form-control" id="title" placeholder="My Awesome Burger">
+<h4>Ingredients</h4>
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        {% for ingredient in ingredients[:10] %}
+        <div class="form-check form-switch">
+            <input class="form-check-input ingredient" type="checkbox" role="switch" id="ingredients[]" value="{{ ingredient }}">
+            <label class="form-check-label" for="flexSwitchCheckDefault">{{ ingredient }}</label>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-sm">
+        {% for ingredient in ingredients[10:20] %}
+        <div class="form-check form-switch">
+            <input class="form-check-input ingredient" type="checkbox" role="switch" id="ingredients[]" value="{{ ingredient }}">
+            <label class="form-check-label" for="flexSwitchCheckDefault">{{ ingredient }}</label>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-sm">
+        {% for ingredient in ingredients[20:] %}
+        <div class="form-check form-switch">
+            <input class="form-check-input ingredient" type="checkbox" role="switch" id="ingredients[]" value="{{ ingredient }}">
+            <label class="form-check-label" for="flexSwitchCheckDefault">{{ ingredient }}</label>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+<h4>Comments</h4>
+<textarea class="form-control" id="comments" rows="3"></textarea>
+<hr>
+<div style="text-align:center; padding:10px;">
+    <button type="button" class="btn btn-danger" id="submit">Submit Recipe</button>
+</div>
+{% else %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h3>Login</h3>
+      <form action="/login" method="POST">
+        <!-- Username input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="loginName" class="form-control" name="username"/>
+          <label class="form-label" for="loginName">Username</label>
+        </div>
+  
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="loginPassword" class="form-control" name="password"/>
+          <label class="form-label" for="loginPassword">Password</label>
+        </div>
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+      </form>
+    </div>
+    <div class="col-sm">
+      <h3>Register</h3>
+      <form action="/register" method="POST">
+        <!-- Username input -->
+        <div class="form-outline mb-4">
+          <input type="text" id="registerUsername" name="username" class="form-control" />
+          <label class="form-label" for="registerUsername">Username</label>
+        </div>
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="registerPassword" name="password" class="form-control" />
+          <label class="form-label" for="registerPassword">Password</label>
+        </div>
+        <!-- Repeat Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="registerRepeatPassword" name="confirm_password" class="form-control" />
+          <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+        </div>
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-3">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endif %}
+
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="/static/js/submit.js"></script>
+{% endblock %}

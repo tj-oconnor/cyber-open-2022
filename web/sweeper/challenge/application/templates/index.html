@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sweeper</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="/static/css/style.css">
+</head>
+    <body>
+	<div id="flex-container">
+      <div id="content">
+		<div id="title_bar">Sweeper</div>
+		<div id="scoreboard">
+			<div id="bomb-counter"></div>
+			<a href="javascript:void(0)" id="reset_button" title="Reset Game"><i class="bi bi-arrow-counterclockwise"></i></a>
+			<a href="javascript:void(0)" id="save_button" title="Save Game"><i class="bi bi-download"></i></a>
+			<a href="javascript:void(0)" id="load_button" title="Load Game"><i class="bi bi-upload"></i></a>
+			<a href="javascript:void(0)" id="credits_button" title="Credits"><i class="bi bi-info-circle"></i></a>
+			<div id="time-counter"></div>
+		</div>
+        <table id="board"></table>
+      </div>
+	</div>
+	<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h3 class="modal-title" id="messageModalTitle"></h3>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body" id="messageModalBody"></div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal fade" id="loadModal" tabindex="-1" role="dialog" aria-labelledby="loadModalTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h3 class="modal-title" id="loadModalTitle">Load Game</h3>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body" id="loadModalBody">
+				<p>Please select a Sweeper save game in the space provided below.</p>
+				<p><input type="file" id="loadFile" autocomplete="off"/></p>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="modal fade" id="creditsModal" tabindex="-1" role="dialog" aria-labelledby="creditsModalTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h3 class="modal-title" id="creditsModalTitle">Credits</h3>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body" id="creditsModalBody">
+				<p>Challenge by <a href="http://darkwolfsolutions.com" target="_blank">@tsuto</a></p>
+				<p>Having fun? <a href='https://grnh.se/82dc5d093us' target='_blank'>We're hiring!</a> &#128058;<br></p>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="/static/js/game.js"></script>    
+    </body>
+</html>
