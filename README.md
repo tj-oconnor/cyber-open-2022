@@ -22,7 +22,7 @@ The US Cyber Games 2022 Open CTF was a collaborative effort to test competitors 
 | [whos that pokemon](crypto/pokemon)    | crypto   | Benderbot                                    |  [our solution](crypto/pokemon/solve.ipynb)            |  
 | [major malfunction](crypto/malfunction)| crypto   | Eric                                         |                                                        |  
 | [greys anatomy](crypto/greys)          | crypto   | Benderbot                                    |  [our solution](crypto/greys/solver.py)                |  
-| [beacon](crypto/beacon)                | crypto   | [tsuto](https://github.com/jselliott)     |  [out solution]((crypto/beacon))                       |
+| [beacon](crypto/beacon)                | crypto   | [tsuto](https://github.com/jselliott)     |  [our solution]((crypto/beacon))                       |
 | [radiation leak](crypto/radiation-leak) | crypto | [MetaCTF](https://metactf.com)             |                                                           | 
 | [archival](re/archival)                | RE       | Rajat                                        |  [our solution](re/archival/sol.py)                    |   
 | [directionless](re/directionless)      | RE       | Rajat                                        |  [our solution](re/directionless/sol.bash)             |   
