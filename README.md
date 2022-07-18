@@ -40,7 +40,7 @@ The US Cyber Games 2022 Open CTF was a collaborative effort to test competitors 
 | [layers](web/layers)                  | web      | [tsuto](https://github.com/jselliott)      |  [our solution](web/layers/layers.mp4)                |
 | [single use](web/single-use)          | web      | [tsuto](https://github.com/jselliott)      |  [our solution](web/single-use/single-use.mp4)        |
 | [sweeper](web/sweeper)                | web      | [tsuto](https://github.com/jselliott)      |                                                       |
-| [fun wordy](web/wordy)                | web      | [tsuto](https://github.com/jselliott)      |  [our solution](web/wordy/wordy.mp4)                  |
+| [wordy](web/wordy)                | web      | [tsuto](https://github.com/jselliott)      |  [our solution](web/wordy/wordy.mp4)                  |
 | [black friday](web/black-friday)      | web      | [MetaCTF](https://metactf.com)                |                                                       |
 
 ## References
