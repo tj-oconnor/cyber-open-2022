@@ -1,4 +1,4 @@
-# Single User
+# Single-Use
 
 A CTFd compatible docker image for a web challenge. Scenario: The Amalgemated Single-Use Plasticware Co. has a new security system for their sales dashboard and boasts that nobody will ever get access to it. Can you prove them wrong?
 
