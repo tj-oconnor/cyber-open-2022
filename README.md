@@ -22,7 +22,7 @@ The US Cyber Games 2022 Open CTF was a collaborative effort to test competitors 
 | [whos that pokemon](crypto/pokemon)    | crypto   | Benderbot                                    |  [our solution](crypto/pokemon/solve.ipynb)            |  
 | [major malfunction](crypto/malfunction)| crypto   | Eric                                         |                                                        |  
 | [greys anatomy](crypto/greys)          | crypto   | Benderbot                                    |  [our solution](crypto/greys/solver.py)                |  
-| [beacon](crypto/beacon)                | crypto   | [jselliot](https://github.com/jselliott)     |  [out solution]((crypto/beacon))                       |
+| [beacon](crypto/beacon)                | crypto   | [tsuto](https://github.com/jselliott)     |  [out solution]((crypto/beacon))                       |
 | [radiation leak](crypto/radiation-leak) | crypto | [MetaCTF](https://metactf.com)             |                                                           | 
 | [archival](re/archival)                | RE       | Rajat                                        |  [our solution](re/archival/sol.py)                    |   
 | [directionless](re/directionless)      | RE       | Rajat                                        |  [our solution](re/directionless/sol.bash)             |   
@@ -35,12 +35,12 @@ The US Cyber Games 2022 Open CTF was a collaborative effort to test competitors 
 | [ZeroZero2Hero](forensics/zerozero2Hero)     | forensics  | [TJ](https://github.com/tj-oconnor/) |  [our solution](forensics/zerozero2Hero/crc-checker.py)|
 | [stomped](forensics/stomped)           | forensics  | [TJ](https://github.com/tj-oconnor/)       |  [our solution](forensics/stomped/stomped.py)         |
 | [from Nand to Tetris to the big screen](forensics/bigscreen) | forensics | [DrB Hacking](https://github.com/jamrootz) | [our solution](forensics/bigscreen/files/solve.py)   |
-| [fun facts](web/fun-facts)            | web      | [jselliot](https://github.com/jselliott)      |  [our solution](web/fun-facts/fun-facts.mp4)          |
-| [grillmaster](web/grillmaster)        | web      | [jselliot](https://github.com/jselliott)      |  [our solution](web/grillmaster/grillmaster.mp4)      |
-| [layers](web/layers)                  | web      | [jselliot](https://github.com/jselliott)      |  [our solution](web/layers/layers.mp4)                |
-| [single use](web/single-use)          | web      | [jselliot](https://github.com/jselliott)      |  [our solution](web/single-use/single-use.mp4)        |
-| [sweeper](web/sweeper)                | web      | [jselliot](https://github.com/jselliott)      |                                                       |
-| [fun wordy](web/wordy)                | web      | [jselliot](https://github.com/jselliott)      |  [our solution](web/wordy/wordy.mp4)                  |
+| [fun facts](web/fun-facts)            | web      | [tsuto](https://github.com/jselliott)      |  [our solution](web/fun-facts/fun-facts.mp4)          |
+| [grillmaster](web/grillmaster)        | web      | [tsuto](https://github.com/jselliott)      |  [our solution](web/grillmaster/grillmaster.mp4)      |
+| [layers](web/layers)                  | web      | [tsuto](https://github.com/jselliott)      |  [our solution](web/layers/layers.mp4)                |
+| [single use](web/single-use)          | web      | [tsuto](https://github.com/jselliott)      |  [our solution](web/single-use/single-use.mp4)        |
+| [sweeper](web/sweeper)                | web      | [tsuto](https://github.com/jselliott)      |                                                       |
+| [fun wordy](web/wordy)                | web      | [tsuto](https://github.com/jselliott)      |  [our solution](web/wordy/wordy.mp4)                  |
 | [black friday](web/black-friday)      | web      | [MetaCTF](https://metactf.com)                |                                                       |
 
 ## References
